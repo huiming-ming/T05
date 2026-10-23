@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>TV Energy Consumption and Electricity Prices</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>TV Energy Consumption and Electricity Prices</h1>
+
+      <p>
+        Explore how annual TV energy consumption varies with energy
+        star ratings and screen technologies, alongside electricity
+        spot prices from 1998 to 2024.
+      </p>
+    </header>
+
+    <div class="charts">
+      <section>
+        <h2>Energy Star Rating and Annual Energy Consumption</h2>
+
+        <p>
+          Each point represents one record in the TV dataset.
+        </p>
+
+        <div id="scatter"></div>
+      </section>
+
+      <section>
+        <h2>Recorded Annual Energy Consumption by Screen Technology</h2>
+
+        <p>
+            Shares are calculated by summing the annual energy consumption
+            values of CSV records within each screen technology.
+            Records are not weighted by the count column.
+        </p>
+
+        <div id="donut"></div>
+      </section>
+
+      <section>
+        <h2>Average Annual Energy Consumption of 55-Inch TVs</h2>
+
+        <p>
+          Compare average annual energy consumption across LCD,
+          LED and OLED televisions.
+        </p>
+
+        <div id="bar"></div>
+      </section>
+
+      <section>
+        <h2>Average Electricity Spot Prices, 1998–2024</h2>
+
+        <p>
+          The supplied average excludes Tasmania and Snowy.
+          Prices are measured in dollars per megawatt-hour.
+        </p>
+
+        <div id="line"></div>
+      </section>
+    </div>
+    <footer>
+    <h2>Data Sources and Notes</h2>
+
+    <p>
+        Source: CSV files supplied with the COS30045 T05 exercise.
+        TV energy consumption is measured in kWh/year.
+        Electricity spot prices are measured in $/MWh.
+    </p>
+
+    <p>
+        Each scatter plot point represents one CSV record.
+        The donut chart sums recorded annual energy values without
+        weighting by the count column. The bar chart shows supplied
+        averages for 55-inch TVs. The electricity price average
+        excludes Tasmania and Snowy.
+    </p>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+
+  <script src="js/scatter.js"></script>
+  <script src="js/donut.js"></script>
+  <script src="js/bar.js"></script>
+  <script src="js/line.js"></script>
+</body>
+</html>
