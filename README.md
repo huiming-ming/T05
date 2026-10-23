@@ -25,7 +25,8 @@ prices through four responsive D3 charts on a single webpage.
 
 ```text
 index.html
-style.css
+css/
+   style.css
 README.md
 js/
   scatter.js
